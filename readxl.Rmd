@@ -1,0 +1,10 @@
+---
+title: "Reading data into R with 'readxl'"
+author: "Mario Strbac"
+date: "02/04/2021"
+output: html_document
+---
+
+## Learning 'readxl'
+
+We are going to be working with some data in csv or excel format.
