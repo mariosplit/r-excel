@@ -1,0 +1,19 @@
+---
+title: "Data visualisation with ggplot2"
+author: "Mario Strbac"
+date: "02/04/2021"
+output: html_document
+---
+### Necessary libraries
+```{r libs, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(here)
+```
+### Read data 
+```{r para5.2, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+ca_np <- read_csv(here("data","ca_np.csv"))
+ci_np <- read_xlsx(here("data","ci_np.xlsx"))
+```
