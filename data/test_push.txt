@@ -1,0 +1,14 @@
+in RStudio, click on the "Tools" menu and select "Shell"
+Run the following command: git push -u origin master
+it might ask you for your git username and password. Supply this information, make sure it is correct
+hopefully the push is successful, then you can close the window
+Now make some more edits to some file so that you have new content to push
+click on the "push" button in RStudio and this time the push should work
+
+In the shell, with working directory set to the directory that holds your git repo, which is also an RStudio Project, what do you get for these commands:
+
+git remote -v
+git branch -vv
+Also, have you simply tried restarting RStudio?
+
+Are you using https or ssh protocol? If https, in the shell, have you had a successful push w/o providing any credentials, i.e. they've been successfully cached?
