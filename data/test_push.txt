@@ -1,3 +1,5 @@
+2021-04-02-INSTALLED latrest git
+
 in RStudio, click on the "Tools" menu and select "Shell"
 Run the following command: git push -u origin master
 it might ask you for your git username and password. Supply this information, make sure it is correct
