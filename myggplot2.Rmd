@@ -1,91 +1,24 @@
 ---
-title: "Data visualisation with ggplot2"
-author: "Mario Strbac"
-date: "02/04/2021"
+title: "Data visualization with ggplot2"
+author: "Mario"
+date: "12/02/2022"
 output: html_document
 ---
-### Necessary libraries
-```{r libs, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
+```{r setup, include=FALSE}
 library(readxl)
 library(here)
+library(ggplot2)
 ```
-### Read data 
-```{r para5.2, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
-ca_np <- read_csv(here("data","ca_np.csv"))
-ci_np <- read_xlsx(here("data","ci_np.xlsx"))
+```{r read data}
+ca_np <- read.csv(here("data", "ca_np.csv"))
+ci_np <- read_xlsx(here("data", "ci_np.xlsx"))
+
 ```
-##  Scatter, Line & Bar Plots
+# Our first plot
 
-**Simple Scatter Plot p59 **
-
-```{r SP1, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
-ggplot(data = ci_np, aes(x=year, y = visitors)) + geom_point()
-```
-
-**Modified Scatter Plot p63**
-
-```{r SP2, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
-ggplot(data = ci_np, aes(x=year, y = visitors)) + geom_point(color="purple",pch=17,size=4,alpha=0.5)
-```
-
-**Mapping Variables onto Scatter Plot p64**
-
-```{r SP3, include=TRUE}
-
-ggplot(data = ci_np, aes(x=year, y = visitors)) +   
-  geom_point(
-    aes(size=visitors,
-        color=visitors),
-    alpha=0.5
-  )
+```{r plot1}
+ggplot(data=ci_np, aes(x=year, y=visitors)) + geom_line()
 
 ```
 
-**Simple Line Plot p59**
-
-```{r para5.3 LP1, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
-ggplot(data = ci_np, aes(x=year, y = visitors)) + 
-  geom_line()
-
-```
-
-**Modified Line Plot p62**
-
-```{r para5.3 LP2, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE)
-ggplot(data = ci_np, aes(x=year, y = visitors)) + 
-  geom_line(
-  color="purple",
-  linetype="dashed"
-  )
-```
-
-**Simple Bar Plot p60**
-
-```{r BP1, include=TRUE}
-
-ggplot(data = ci_np, aes(x=year, y = visitors)) + geom_col()
-
-```
-
-**Mapping Color Variation Based on Visitor Numbers onto Bar Plot p64**
-
-```{r BP2, include=TRUE}
-
-ggplot(data = ci_np, aes(x=year, y = visitors)) + geom_col(aes(fill = visitors))
-
-```
-
-**Simple Area Plot p65**
-
-```{r AP1, include=TRUE}
-
-ggplot(data = ci_np, aes(x=year, y = visitors)) + geom_area(fill="orange",color="black")
-```
 
