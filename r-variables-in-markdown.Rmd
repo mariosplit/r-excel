@@ -1,0 +1,27 @@
+---
+title: 'Markdown: Use R variables'
+author: "Mario"
+date: "12/02/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+total_area <- (800 * 7) / 2
+```
+
+You can add any variable that you want to a report using the syntax
+
+"r total_area"
+
+However replace the double quotes “” with ticks `
+
+There are **`r total_area * 3`** km of burned area according to modis.
+
+Where the markdown text is surrounded by ticks. Followed by the language “r” and then the variable that you want to print in your report! This is very useful when you are trying to create a fully automated report. As you update the data, the output numbers if your report also update!
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

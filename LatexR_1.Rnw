@@ -1,0 +1,20 @@
+\chapter{Creating a table}
+\begin{verbatim}
+table_latex <- xtable::xtable(iris[1:50,], caption = "Iris Data")
+print(table_latex,
+      latex.environments =  c("scriptsize", "center", "widestuff"),
+      tabular.environment = "longtable",
+      floating = FALSE
+)
+\end{verbatim}
+
+<<CreateTable,  echo=TRUE, results = 'asis'>>=
+library("xtable")
+table_latex <- xtable::xtable(iris[1:50,],
+                              caption = "Iris Data")
+print(table_latex,
+      latex.environments =  c("scriptsize", "center", "widestuff"),
+      tabular.environment = "longtable",
+      floating = FALSE
+)
+@

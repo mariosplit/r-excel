@@ -1,0 +1,57 @@
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> my.knit = knitr::knit("LatexR_1.Rnw")
+
+
+processing file: LatexR_1.Rnw
+  |                                                                              |                                                                      |   0%  |                                                                              |...................................                                   |  50%
+  ordinary text without R code
+
+  |                                                                              |......................................................................| 100%
+label: CreateTable (with options) 
+List of 2
+ $ echo   : logi TRUE
+ $ results: chr "asis"
+
+
+output file: LatexR_1.tex
+
+> ## document.tex is the latex file that will be compiled by the two following command:
+> 
+> system(paste0("pdflatex ", "LatexR_1.tex")) 
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(LatexR_1.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+! Undefined control sequence.
+l.1 \chapter
+            {Creating a table}
+? 
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{C
+              reating a table}
+? 

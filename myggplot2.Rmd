@@ -2,7 +2,9 @@
 title: "Data visualization with ggplot2"
 author: "Mario"
 date: "12/02/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 ```{r setup, include=FALSE}
 library(readxl)
@@ -22,3 +24,29 @@ ggplot(data=ci_np, aes(x=year, y=visitors)) + geom_line()
 ```
 
 
+
+# Our second plot b
+
+```{r plot2}
+ggplot(data=ci_np, aes(x=year, y=visitors)) + 
+  geom_point(
+        aes(size=visitors,
+            color=visitors),
+        alpha=0.5
+  )
+                                                       
+```
+
+# Our third plot
+
+```{r plot3}
+ggplot(data=ci_np, aes(x=year, y=visitors)) + geom_col(aes(fill=visitors))
+
+```
+
+# Our fourth plot
+
+```{r plot4}
+ggplot(data=ci_np, aes(x=year, y=visitors)) + geom_area()
+
+```

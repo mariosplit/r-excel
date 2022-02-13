@@ -1,0 +1,82 @@
+\chapter{Creating a table}
+\begin{verbatim}
+table_latex <- xtable::xtable(iris[1:50,], caption = "Iris Data")
+print(table_latex,
+      latex.environments =  c("scriptsize", "center", "widestuff"),
+      tabular.environment = "longtable",
+      floating = FALSE
+)
+\end{verbatim}
+
+\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(}\hlstr{"xtable"}\hlstd{)}
+\hlstd{table_latex} \hlkwb{<-} \hlstd{xtable}\hlopt{::}\hlkwd{xtable}\hlstd{(iris[}\hlnum{1}\hlopt{:}\hlnum{50}\hlstd{,],}
+                              \hlkwc{caption} \hlstd{=} \hlstr{"Iris Data"}\hlstd{)}
+\hlkwd{print}\hlstd{(table_latex,}
+      \hlkwc{latex.environments} \hlstd{=}  \hlkwd{c}\hlstd{(}\hlstr{"scriptsize"}\hlstd{,} \hlstr{"center"}\hlstd{,} \hlstr{"widestuff"}\hlstd{),}
+      \hlkwc{tabular.environment} \hlstd{=} \hlstr{"longtable"}\hlstd{,}
+      \hlkwc{floating} \hlstd{=} \hlnum{FALSE}
+\hlstd{)}
+\end{alltt}
+\end{kframe}% latex table generated in R 4.1.2 by xtable 1.8-4 package
+% Sat Feb 12 21:33:33 2022
+\begin{longtable}{rrrrrl}
+  \hline
+ & Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species \\ 
+  \hline
+1 & 5.10 & 3.50 & 1.40 & 0.20 & setosa \\ 
+  2 & 4.90 & 3.00 & 1.40 & 0.20 & setosa \\ 
+  3 & 4.70 & 3.20 & 1.30 & 0.20 & setosa \\ 
+  4 & 4.60 & 3.10 & 1.50 & 0.20 & setosa \\ 
+  5 & 5.00 & 3.60 & 1.40 & 0.20 & setosa \\ 
+  6 & 5.40 & 3.90 & 1.70 & 0.40 & setosa \\ 
+  7 & 4.60 & 3.40 & 1.40 & 0.30 & setosa \\ 
+  8 & 5.00 & 3.40 & 1.50 & 0.20 & setosa \\ 
+  9 & 4.40 & 2.90 & 1.40 & 0.20 & setosa \\ 
+  10 & 4.90 & 3.10 & 1.50 & 0.10 & setosa \\ 
+  11 & 5.40 & 3.70 & 1.50 & 0.20 & setosa \\ 
+  12 & 4.80 & 3.40 & 1.60 & 0.20 & setosa \\ 
+  13 & 4.80 & 3.00 & 1.40 & 0.10 & setosa \\ 
+  14 & 4.30 & 3.00 & 1.10 & 0.10 & setosa \\ 
+  15 & 5.80 & 4.00 & 1.20 & 0.20 & setosa \\ 
+  16 & 5.70 & 4.40 & 1.50 & 0.40 & setosa \\ 
+  17 & 5.40 & 3.90 & 1.30 & 0.40 & setosa \\ 
+  18 & 5.10 & 3.50 & 1.40 & 0.30 & setosa \\ 
+  19 & 5.70 & 3.80 & 1.70 & 0.30 & setosa \\ 
+  20 & 5.10 & 3.80 & 1.50 & 0.30 & setosa \\ 
+  21 & 5.40 & 3.40 & 1.70 & 0.20 & setosa \\ 
+  22 & 5.10 & 3.70 & 1.50 & 0.40 & setosa \\ 
+  23 & 4.60 & 3.60 & 1.00 & 0.20 & setosa \\ 
+  24 & 5.10 & 3.30 & 1.70 & 0.50 & setosa \\ 
+  25 & 4.80 & 3.40 & 1.90 & 0.20 & setosa \\ 
+  26 & 5.00 & 3.00 & 1.60 & 0.20 & setosa \\ 
+  27 & 5.00 & 3.40 & 1.60 & 0.40 & setosa \\ 
+  28 & 5.20 & 3.50 & 1.50 & 0.20 & setosa \\ 
+  29 & 5.20 & 3.40 & 1.40 & 0.20 & setosa \\ 
+  30 & 4.70 & 3.20 & 1.60 & 0.20 & setosa \\ 
+  31 & 4.80 & 3.10 & 1.60 & 0.20 & setosa \\ 
+  32 & 5.40 & 3.40 & 1.50 & 0.40 & setosa \\ 
+  33 & 5.20 & 4.10 & 1.50 & 0.10 & setosa \\ 
+  34 & 5.50 & 4.20 & 1.40 & 0.20 & setosa \\ 
+  35 & 4.90 & 3.10 & 1.50 & 0.20 & setosa \\ 
+  36 & 5.00 & 3.20 & 1.20 & 0.20 & setosa \\ 
+  37 & 5.50 & 3.50 & 1.30 & 0.20 & setosa \\ 
+  38 & 4.90 & 3.60 & 1.40 & 0.10 & setosa \\ 
+  39 & 4.40 & 3.00 & 1.30 & 0.20 & setosa \\ 
+  40 & 5.10 & 3.40 & 1.50 & 0.20 & setosa \\ 
+  41 & 5.00 & 3.50 & 1.30 & 0.30 & setosa \\ 
+  42 & 4.50 & 2.30 & 1.30 & 0.30 & setosa \\ 
+  43 & 4.40 & 3.20 & 1.30 & 0.20 & setosa \\ 
+  44 & 5.00 & 3.50 & 1.60 & 0.60 & setosa \\ 
+  45 & 5.10 & 3.80 & 1.90 & 0.40 & setosa \\ 
+  46 & 4.80 & 3.00 & 1.40 & 0.30 & setosa \\ 
+  47 & 5.10 & 3.80 & 1.60 & 0.20 & setosa \\ 
+  48 & 4.60 & 3.20 & 1.40 & 0.20 & setosa \\ 
+  49 & 5.30 & 3.70 & 1.50 & 0.20 & setosa \\ 
+  50 & 5.00 & 3.30 & 1.40 & 0.20 & setosa \\ 
+   \hline
+\hline
+\caption{Iris Data} 
+\end{longtable}
+
